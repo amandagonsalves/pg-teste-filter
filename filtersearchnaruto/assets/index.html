@@ -7,6 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section class="section">
+        <h2>Status</h2>
+        <button id="btn-all">Todos</button>
+        <button id="alive">Vivos</button>
+        <button id="dead">Mortos</button>
+
+        <h2>Sexo</h2>
+        <button id="btn-allgender">Todos</button>
+        <button id="female">Feminino</button>
+        <button id="male">Masculino</button>
+
+        <h2>Temporadas</h2>
+        <button id="btn-alltemp">Clássico e Shippuden</button>
+        <button id="shippuden">Shippuden</button>
+        
+        <table id="tabela">
+            <tr class="line">
+                <td>
+                    <img src="/filtersearchnaruto/img/naruto.jpg" alt="">
+                    <p>Naruto</p>
+                    <p>Status: Alive</p>
+                    <p>Gender: Male</p>
+                </td>
+                <td>
+                    <img src="/filtersearchnaruto/img/neji.jpg" alt="">
+                    <p>Neji</p>
+                    <p>Status: Dead</p>
+                    <p>Gender: Male</p>
+                </td>
+                <td>
+                    <img src="/filtersearchnaruto/img/orochimaru.jpg" alt="">
+                    <p>Orochimaru</p>
+                    <p>Status: Alive</p>
+                    <p>Gender: Male</p>
+                </td>
+            </tr>
+            <tr class="line">
+                <td><img src="/filtersearchnaruto/img/pain.jpg" alt=""><p>Pain</p><p>Status: Dead</p><p>Gender: Male</p></td>
+                <td><img src="/filtersearchnaruto/img/sai.jpg" alt=""><p>Sai</p><p>Status: Alive</p><p>Gender: Male</p></td>
+                <td><img src="/filtersearchnaruto/img/sasori.jpg" alt=""><p>Sasori</p><p>Status: Dead</p><p>Gender: Male</p></td>
+            </tr>
+        </table>
+    </section>
     <main>
         <div class="main">
             <h1>Filter Naruto</h1>
@@ -14,7 +57,7 @@
             <nav>
                 <ul id="list">
                     <li><a href="">Naruto</a></li>
-                    <li><a href="">Lee</a></li>
+                    <li><a href="">Rock Lee</a></li>
                     <li><a href="">Minato</a></li>
                     <li><a href="">Danzou</a></li>
                     <li><a href="">Gaara</a></li>
@@ -38,6 +81,6 @@
             </nav>
         </div>
     </main>
-    <script src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     padding: 0;
 }
 .main {
-    margin: 0 auto;
+    margin:0 auto;
     width: 500px;
     background-color: rgb(255, 143, 51);
     text-align: center;
@@ -28,4 +28,37 @@ a {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
+}
+.section {
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.section button {
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.section button:hover {
+    border: 2px solid rgb(255, 81, 0);
+}
+.section h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#tabela {
+    width: 100%;
+}
+#tabela td {
+    width: 100px;
+    height: 200px;
+}
+#tabela img {
+    width: 70px;
+    height: 100px;
+}
+#tabela p {
+    border: 1px solid black;
 }
