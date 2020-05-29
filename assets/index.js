@@ -1,4 +1,3 @@
-
 function filterSearch() {
     let txt1 = document.querySelector('#txt1');
     let filterValue = txt1.value.toUpperCase();
