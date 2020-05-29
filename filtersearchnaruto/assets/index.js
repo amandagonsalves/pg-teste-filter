@@ -147,11 +147,11 @@ function filterPers() {
 var table = document.querySelector('#tabela');
 var td = table.getElementsByTagName('td');
 console.log(td.length)
-function selectTd() {
+/*function selectTd() {
     let i;
     for(i=0;i<td.length;i++) {
         td[i].style.display=''
-    }
+    }*/
     /*if(filterAll===true) {
         td[i].style.display='none'
     } else if(filterAlive()===true) {
@@ -164,9 +164,134 @@ function selectTd() {
 
     } else if(filterMale()===true) {
 
-    }*/
+    }
 }
-selectTd()
+selectTd()*/
+/* INDEX
+0 naruto
+1 neji
+2 orochi
+3
+
+
+
+*/ 
+document.querySelector('#btn-all').addEventListener('click', e=> {
+    let i;
+    for(i=0;i<td.length;i++) {
+        td[i].style.display=''
+    }
+})
+document.querySelector('#alive').addEventListener('click', e=> {
+    let i;
+    for(i=0;i<td.length;i++) {
+        td[0].style.display='' //naruto
+        td[1].style.display='none' //neji
+        td[2].style.display='' //orochimaru
+        td[3].style.display='none' //pain
+        td[4].style.display='' //sai
+        td[5].style.display='none' //sasori
+        td[6].style.display='' //shikamaru
+        td[7].style.display='' //shino
+        td[8].style.display='none' //shisui
+        td[9].style.display='' //shizune
+        td[10].style.display='' //tenten
+        td[11].style.display='' //tsunade
+        td[12].style.display='none' //danzou
+        td[13].style.display='' //gaara
+        td[14].style.display='none' //hidan
+        td[15].style.display='' //kabuto
+        td[16].style.display='none' //kaguya
+        td[17].style.display='' //kakashi
+        td[18].style.display='' //lee
+        td[19].style.display='none' //madara
+        td[20].style.display='none' //minato
+    }
+})
+document.querySelector('#dead').addEventListener('click', e=> {
+    let i;
+    for(i=0;i<td.length;i++) {
+        td[0].style.display='none' //naruto
+        td[1].style.display='' //neji
+        td[2].style.display='none' //orochimaru
+        td[3].style.display='' //pain
+        td[4].style.display='none' //sai
+        td[5].style.display='' //sasori
+        td[6].style.display='none' //shikamaru
+        td[7].style.display='none' //shino
+        td[8].style.display='' //shisui
+        td[9].style.display='none' //shizune
+        td[10].style.display='none' //tenten
+        td[11].style.display='none' //tsunade
+        td[12].style.display='' //danzou
+        td[13].style.display='none' //gaara
+        td[14].style.display='' //hidan
+        td[15].style.display='none' //kabuto
+        td[16].style.display='' //kaguya
+        td[17].style.display='none' //kakashi
+        td[18].style.display='none' //lee
+        td[19].style.display='' //madara
+        td[20].style.display='' //minato
+    }
+})
+document.querySelector('#btn-allgender').addEventListener('click', e=> {
+    let i;
+    for(i=0;i<td.length;i++) {
+        td[i].style.display=''
+    }
+})
+document.querySelector('#female').addEventListener('click', e=> {
+    let i;
+    for(i=0;i<td.length;i++) {
+        td[0].style.display='none' //naruto
+        td[1].style.display='none' //neji
+        td[2].style.display='none' //orochimaru
+        td[3].style.display='none' //pain
+        td[4].style.display='none' //sai
+        td[5].style.display='none' //sasori
+        td[6].style.display='none' //shikamaru
+        td[7].style.display='none' //shino
+        td[8].style.display='none' //shisui
+        td[9].style.display='' //shizune
+        td[10].style.display='' //tenten
+        td[11].style.display='' //tsunade
+        td[12].style.display='none' //danzou
+        td[13].style.display='none' //gaara
+        td[14].style.display='none' //hidan
+        td[15].style.display='none' //kabuto
+        td[16].style.display='' //kaguya
+        td[17].style.display='none' //kakashi
+        td[18].style.display='none' //lee
+        td[19].style.display='none' //madara
+        td[20].style.display='none' //minato
+    }
+})
+document.querySelector('#male').addEventListener('click', e=> {
+    let i;
+    for(i=0;i<td.length;i++) {
+        td[0].style.display='' //naruto
+        td[1].style.display='' //neji
+        td[2].style.display='' //orochimaru
+        td[3].style.display='' //pain
+        td[4].style.display='' //sai
+        td[5].style.display='' //sasori
+        td[6].style.display='' //shikamaru
+        td[7].style.display='' //shino
+        td[8].style.display='' //shisui
+        td[9].style.display='none' //shizune
+        td[10].style.display='none' //tenten
+        td[11].style.display='none' //tsunade
+        td[12].style.display='' //danzou
+        td[13].style.display='' //gaara
+        td[14].style.display='' //hidan
+        td[15].style.display='' //kabuto
+        td[16].style.display='none' //kaguya
+        td[17].style.display='' //kakashi
+        td[18].style.display='' //lee
+        td[19].style.display='' //madara
+        td[20].style.display='' //minato
+    }
+})
 
 function filterAll() {
     const newPersAll = personagens.filter(personagem => personagem)
