@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.card {
+    margin: 0 auto;
+    background-color: rgb(178, 192, 187);
+    width: 500px;
+    text-align: center;
+}
+.card ul {
+    list-style: none;
+    display: block;
+}
+.card ul li {
+    border: 1px solid rgb(170, 170, 189);
+    padding: 20px;
+}
+.card ul li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+h1 {
+    padding-top:20px;
+}
+input {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
