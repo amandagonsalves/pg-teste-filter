@@ -183,7 +183,7 @@ document.querySelector('#btn-all').addEventListener('click', e=> {
     }
 })
 document.querySelector('#alive').addEventListener('click', e=> {
-    let i;
+    /*let i;
     for(i=0;i<td.length;i++) {
         td[0].style.display='' //naruto
         td[1].style.display='none' //neji
@@ -206,7 +206,8 @@ document.querySelector('#alive').addEventListener('click', e=> {
         td[18].style.display='' //lee
         td[19].style.display='none' //madara
         td[20].style.display='none' //minato
-    }
+    }*/
+    filterAlive()
 })
 document.querySelector('#dead').addEventListener('click', e=> {
     let i;
@@ -292,25 +293,24 @@ document.querySelector('#male').addEventListener('click', e=> {
         td[20].style.display='' //minato
     }
 })
-var alive;
 function filterAll() {
-    const newPersAll = personagens.filter(personagem => personagem)
-    td.innerHTML = newPersAll
+    const newPersAll = personagens.filter(personagem => personagem);
 }
 filterAll();
 function filterAlive() {
-    let indices = []
-    var array = newPersAlive;
-    var elemento = name;
-    var idx = array.indexOf(elemento);
-    while (idx != -1) {
-      indices.push(idx);
-      idx = array.indexOf(elemento, idx + 1);
-    }
-    console.log(indices);
-
-
+    let i;
     var newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
+    var table = document.querySelector('#tabela')
+    var persDeadTd = table.getElementsByClassName('dead')
+    var persAliveTd = table.getElementsByClassName('alive')
+    for(i=0;i<newPersAlive.length;i++){
+        
+        //var indices = newPersAlive.indexOf('Alive',[i])
+        persAliveTd[i].style.display='';
+        persDeadTd[i].style.display='none';
+        console.log(persAliveTd[i]);
+        
+    }
 }
 filterAlive()
 function filterDead() {
