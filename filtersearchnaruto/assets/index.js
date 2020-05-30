@@ -292,15 +292,25 @@ document.querySelector('#male').addEventListener('click', e=> {
         td[20].style.display='' //minato
     }
 })
-
+var alive;
 function filterAll() {
     const newPersAll = personagens.filter(personagem => personagem)
-    console.log(newPersAll)
+    td.innerHTML = newPersAll
 }
-filterAll()
+filterAll();
 function filterAlive() {
+    let indices = []
+    var array = newPersAlive;
+    var elemento = name;
+    var idx = array.indexOf(elemento);
+    while (idx != -1) {
+      indices.push(idx);
+      idx = array.indexOf(elemento, idx + 1);
+    }
+    console.log(indices);
+
+
     var newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
-    console.log(newPersAlive)
 }
 filterAlive()
 function filterDead() {
