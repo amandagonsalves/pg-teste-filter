@@ -287,31 +287,31 @@ function filterAllGender() {
 }
 //==============================================================
 function filterMale() {
-    var persMale1 = personagens.filter(personagem => personagem.gender === 'Male')
+    let persMale = personagens.filter(personagem => personagem.gender === 'Male')
     let i;
-    for(i=0;i<persMale1.length;i++){
+    for(i=0;i<persMale.length;i++){
         let table = document.querySelector('#tabela')
-        let persFemaleTd1 = table.getElementsByClassName('female')
-        let persMaleTd1 = table.getElementsByClassName('male')
-        persFemaleTd1[i].style.display='none';
-        persMaleTd1[i].style.display='';
-        console.log(persMaleTd1[i]);
-        console.log(persMale1.length)
+        let persFemaleTd = table.getElementsByClassName('female')
+        let persMaleTd = table.getElementsByClassName('male')
+        persFemaleTd[i].style.display='none';
+        persMaleTd[i].style.display='';
+        console.log(persMaleTd[i]);
+        console.log(persMale.length)
     }
 }
 //==============================================================
 function filterFemale() {
-    let persFemale2 = personagens.filter(personagem => personagem.gender === 'Female')
+    let persFemale = personagens.filter(personagem => personagem.gender === 'Female')
     let i;
     let table = document.querySelector('#tabela')
-        let persMaleTd2 = table.getElementsByClassName('male')
-        let persFemaleTd2 = table.getElementsByClassName('female')
-    for(i=0;i<persFemale2.length;i++){
+        let persMaleTd = table.getElementsByClassName('male')
+        let persFemaleTd = table.getElementsByClassName('female')
+    for(i=0;i<persFemale.length;i++){
         
-        persFemaleTd2[i].style.display='none';
-        persMaleTd2[i].style.display='none';
-        console.log(persFemaleTd2[i]);
-        console.log(persFemale2.length)
+        persFemaleTd[i].style.display='none';
+        persMaleTd[i].style.display='none';
+        console.log(persFemaleTd[i]);
+        console.log(persFemale.length)
     }
 }
 //==============================================================
