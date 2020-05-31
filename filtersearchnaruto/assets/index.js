@@ -149,12 +149,13 @@ var td = table.getElementsByTagName('td');
 console.log(td.length)
 //==============================================================
 document.querySelector('#btn-all').addEventListener('click', e=> {
-    let i;
-    for(i=0;i<td.length;i++) {
-        td[i].style.display=''
-    }
+    filterAll()
 })
 //==============================================================
+document.querySelector('#btn-allgender').addEventListener('click', e=> {
+    filterAllGender()
+ })
+ //==============================================================
 document.querySelector('#alive').addEventListener('click', e=> {
     filterAlive()
     /*let i;
@@ -185,8 +186,8 @@ document.querySelector('#alive').addEventListener('click', e=> {
 })
 //==============================================================
 document.querySelector('#dead').addEventListener('click', e=> {
-    //filterDead()
-    let i;
+    filterDead()
+    /*let i;
     for(i=0;i<td.length;i++) {
         td[0].style.display='none' //naruto
         td[1].style.display='' //neji
@@ -209,16 +210,14 @@ document.querySelector('#dead').addEventListener('click', e=> {
         td[18].style.display='none' //lee
         td[19].style.display='' //madara
         td[20].style.display='' //minato
-    }
+    }*/
 })
 //==============================================================
-document.querySelector('#btn-allgender').addEventListener('click', e=> {
-   filterAllGender()
-})
+
 //==============================================================
 document.querySelector('#female').addEventListener('click', e=> {
-    //filterFemale()
-    let i;
+    filterFemale()
+    /*let i;
     for(i=0;i<td.length;i++) {
         td[0].style.display='none' //naruto
         td[1].style.display='none' //neji
@@ -241,7 +240,7 @@ document.querySelector('#female').addEventListener('click', e=> {
         td[18].style.display='none' //lee
         td[19].style.display='none' //madara
         td[20].style.display='none' //minato
-    }
+    }*/
 })
 //==============================================================
 document.querySelector('#male').addEventListener('click', e=> {
@@ -250,15 +249,23 @@ document.querySelector('#male').addEventListener('click', e=> {
 //==============================================================
 function filterAll() {
     const newPersAll = personagens.filter(personagem => personagem);
+    let i;
+    for(i=0;i<newPersAll.length;i++) {
+        td[i].style.display='';
+    }
 }
+//==============================================================
+var table = document.querySelector('#tabela');
+var persDeadTd = table.getElementsByClassName('dead');
+var persAliveTd = table.getElementsByClassName('alive');
+var persFemaleTd = table.getElementsByClassName('female');
+var persMaleTd = table.getElementsByClassName('male');
+
 //==============================================================
 function filterAlive() {
     let i;
     let newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
     for(i=0;i<newPersAlive.length;i++){
-        let table = document.querySelector('#tabela')
-        let persDeadTd = table.getElementsByClassName('dead')
-        let persAliveTd = table.getElementsByClassName('alive')
         persAliveTd[i].style.display='';
         persDeadTd[i].style.display='none';
         console.log(persAliveTd[i]);
@@ -269,11 +276,8 @@ function filterDead() {
     let i;
     let newPersDead = personagens.filter(personagem => personagem.status === 'Dead')
     for(i=0;i<newPersDead.length;i++){
-        let table = document.querySelector('#tabela')
-        let persDeadTd = table.getElementsByClassName('dead')
-        let persAliveTd = table.getElementsByClassName('alive')
-        persAliveTd[i].style.display='none';
         persDeadTd[i].style.display='';
+        persAliveTd[i].style.display='none';
         console.log(persDeadTd[i]);
     }
 }
@@ -290,9 +294,6 @@ function filterMale() {
     let persMale = personagens.filter(personagem => personagem.gender === 'Male')
     let i;
     for(i=0;i<persMale.length;i++){
-        let table = document.querySelector('#tabela')
-        let persFemaleTd = table.getElementsByClassName('female')
-        let persMaleTd = table.getElementsByClassName('male')
         persFemaleTd[i].style.display='none';
         persMaleTd[i].style.display='';
         console.log(persMaleTd[i]);
@@ -303,15 +304,11 @@ function filterMale() {
 function filterFemale() {
     let persFemale = personagens.filter(personagem => personagem.gender === 'Female')
     let i;
-    let table = document.querySelector('#tabela')
-        let persMaleTd = table.getElementsByClassName('male')
-        let persFemaleTd = table.getElementsByClassName('female')
     for(i=0;i<persFemale.length;i++){
-        
-        persFemaleTd[i].style.display='none';
+        persFemaleTd[i].style.display='';
         persMaleTd[i].style.display='none';
-        console.log(persFemaleTd[i]);
-        console.log(persFemale.length)
+        //console.log(persFemaleTd[i]);
+        //console.log(persFemale.length)
     }
 }
 //==============================================================
