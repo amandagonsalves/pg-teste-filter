@@ -171,6 +171,12 @@ document.querySelector('#female').addEventListener('click', e=> {
 document.querySelector('#male').addEventListener('click', e=> {
     filterMale()
 })
+document.querySelector('#btn-alltemp').addEventListener('click', e=> {
+    filterAllTemp()
+})
+document.querySelector('#shippuden').addEventListener('click', e=> {
+    filterShippuden()
+})
 //==============================================================
 function filterAll() {
     let newPersAll = personagens.filter(personagem => personagem);
@@ -180,11 +186,42 @@ function filterAll() {
     }
 }
 //==============================================================
+function filterAllTemp() {
+    //let persAllTemp = personagens.filter(personagem => personagem.temp === 'All');
+    isAllTemp()
+}
+function filterShippuden() {
+    //let persShippuden = personagens.filter(personagem => personagem.temp === 'Shippuden');
+    isShippuden()
+}
+//==============================================================
 var table = document.querySelector('#tabela');
 var persDeadTd = table.getElementsByClassName('dead');
 var persAliveTd = table.getElementsByClassName('alive');
 var persFemaleTd = table.getElementsByClassName('female');
 var persMaleTd = table.getElementsByClassName('male');
+var persAllTempTd = table.getElementsByClassName('all');
+var persShippuden = table.getElementsByClassName('shippuden');
+//==============================================================
+function isAllTemp() {
+    let i;
+    for(i=0;i<persAllTempTd.length;i++) {
+        persAllTempTd[i].style.display = '';
+    }
+    for(i=0;i<persShippuden.length;i++) {
+        persShippuden[i].style.display = 'none';
+    }
+}
+//==============================================================
+function isShippuden() {
+    let i;
+    for(i=0;i<persAllTempTd.length;i++) {
+        persAllTempTd[i].style.display = 'none';
+    }
+    for(i=0;i<persShippuden.length;i++) {
+        persShippuden[i].style.display = '';
+    }
+}
 //==============================================================
 function isAlive() {
     let i;
