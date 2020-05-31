@@ -260,15 +260,25 @@ var persDeadTd = table.getElementsByClassName('dead');
 var persAliveTd = table.getElementsByClassName('alive');
 var persFemaleTd = table.getElementsByClassName('female');
 var persMaleTd = table.getElementsByClassName('male');
-
+//==============================================================
+function isAlive() {
+    let i;
+    persAliveTd[i].style.display='';
+    persDeadTd[i].style.display='none';
+}
+//==============================================================
+function isDead() {
+    let i;
+    persDeadTd[i].style.display='';
+    persAliveTd[i].style.display='none';
+}
 //==============================================================
 function filterAlive() {
     let i;
     let newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
     for(i=0;i<newPersAlive.length;i++){
-        persAliveTd[i].style.display='';
-        persDeadTd[i].style.display='none';
-        console.log(persAliveTd[i]);
+        isAlive()
+        //console.log(persAliveTd[i])
     }
 }
 //==============================================================
@@ -276,9 +286,8 @@ function filterDead() {
     let i;
     let newPersDead = personagens.filter(personagem => personagem.status === 'Dead')
     for(i=0;i<newPersDead.length;i++){
-        persDeadTd[i].style.display='';
-        persAliveTd[i].style.display='none';
-        console.log(persDeadTd[i]);
+        isDead()
+        //console.log(persDeadTd[i]);
     }
 }
 //==============================================================
