@@ -185,8 +185,8 @@ document.querySelector('#alive').addEventListener('click', e=> {
 })
 //==============================================================
 document.querySelector('#dead').addEventListener('click', e=> {
-    filterDead()
-    /*let i;
+    //filterDead()
+    let i;
     for(i=0;i<td.length;i++) {
         td[0].style.display='none' //naruto
         td[1].style.display='' //neji
@@ -209,7 +209,7 @@ document.querySelector('#dead').addEventListener('click', e=> {
         td[18].style.display='none' //lee
         td[19].style.display='' //madara
         td[20].style.display='' //minato
-    }*/
+    }
 })
 //==============================================================
 document.querySelector('#btn-allgender').addEventListener('click', e=> {
@@ -217,8 +217,8 @@ document.querySelector('#btn-allgender').addEventListener('click', e=> {
 })
 //==============================================================
 document.querySelector('#female').addEventListener('click', e=> {
-    filterFemale()
-    /*let i;
+    //filterFemale()
+    let i;
     for(i=0;i<td.length;i++) {
         td[0].style.display='none' //naruto
         td[1].style.display='none' //neji
@@ -241,7 +241,7 @@ document.querySelector('#female').addEventListener('click', e=> {
         td[18].style.display='none' //lee
         td[19].style.display='none' //madara
         td[20].style.display='none' //minato
-    }*/
+    }
 })
 //==============================================================
 document.querySelector('#male').addEventListener('click', e=> {
@@ -266,8 +266,8 @@ function filterAlive() {
 }
 //==============================================================
 function filterDead() {
-    let newPersDead = personagens.filter(personagem => personagem.status === 'Dead')
     let i;
+    let newPersDead = personagens.filter(personagem => personagem.status === 'Dead')
     for(i=0;i<newPersDead.length;i++){
         let table = document.querySelector('#tabela')
         let persDeadTd = table.getElementsByClassName('dead')
