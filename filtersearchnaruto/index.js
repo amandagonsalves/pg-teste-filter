@@ -263,23 +263,31 @@ var persMaleTd = table.getElementsByClassName('male');
 //==============================================================
 function isAlive() {
     let i;
-    persAliveTd[i].style.display='';
-    persDeadTd[i].style.display='none';
+    for(i=0;i<persAliveTd.length;i++){
+        persAliveTd[i].style.display='';
+    }
+    for(i=0;i<persDeadTd.length;i++){
+        persDeadTd[i].style.display='none';
+    }
 }
 //==============================================================
 function isDead() {
     let i;
-    persDeadTd[i].style.display='';
-    persAliveTd[i].style.display='none';
+    for(i=0;i<persAliveTd.length;i++){
+        persAliveTd[i].style.display='none';
+    }
+    for(i=0;i<persDeadTd.length;i++){
+        persDeadTd[i].style.display='';
+    }
 }
 //==============================================================
 function filterAlive() {
-    let i;
-    let newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
-    for(i=0;i<newPersAlive.length;i++){
+    
+    //let newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
+    
         isAlive()
         //console.log(persAliveTd[i])
-    }
+   
 }
 //==============================================================
 function filterDead() {
