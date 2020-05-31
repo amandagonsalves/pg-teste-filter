@@ -146,7 +146,6 @@ function filterPers() {
 
 var table = document.querySelector('#tabela');
 var td = table.getElementsByTagName('td');
-console.log(td.length)
 //==============================================================
 document.querySelector('#btn-all').addEventListener('click', e=> {
     filterAll()
