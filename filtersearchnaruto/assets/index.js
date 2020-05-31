@@ -275,9 +275,7 @@ function filterDead() {
         persAliveTd[i].style.display='none';
         persDeadTd[i].style.display='';
         console.log(persDeadTd[i]);
-        
     }
-    
 }
 //==============================================================
 function filterAllGender() {
