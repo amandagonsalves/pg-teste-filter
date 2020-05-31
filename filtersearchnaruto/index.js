@@ -158,89 +158,14 @@ document.querySelector('#btn-allgender').addEventListener('click', e=> {
  //==============================================================
 document.querySelector('#alive').addEventListener('click', e=> {
     filterAlive()
-    /*let i;
-    for(i=0;i<td.length;i++) {
-        td[0].style.display='' //naruto
-        td[1].style.display='none' //neji
-        td[2].style.display='' //orochimaru
-        td[3].style.display='none' //pain
-        td[4].style.display='' //sai
-        td[5].style.display='none' //sasori
-        td[6].style.display='' //shikamaru
-        td[7].style.display='' //shino
-        td[8].style.display='none' //shisui
-        td[9].style.display='' //shizune
-        td[10].style.display='' //tenten
-        td[11].style.display='' //tsunade
-        td[12].style.display='none' //danzou
-        td[13].style.display='' //gaara
-        td[14].style.display='none' //hidan
-        td[15].style.display='' //kabuto
-        td[16].style.display='none' //kaguya
-        td[17].style.display='' //kakashi
-        td[18].style.display='' //lee
-        td[19].style.display='none' //madara
-        td[20].style.display='none' //minato
-    }*/
-    
 })
 //==============================================================
 document.querySelector('#dead').addEventListener('click', e=> {
     filterDead()
-    /*let i;
-    for(i=0;i<td.length;i++) {
-        td[0].style.display='none' //naruto
-        td[1].style.display='' //neji
-        td[2].style.display='none' //orochimaru
-        td[3].style.display='' //pain
-        td[4].style.display='none' //sai
-        td[5].style.display='' //sasori
-        td[6].style.display='none' //shikamaru
-        td[7].style.display='none' //shino
-        td[8].style.display='' //shisui
-        td[9].style.display='none' //shizune
-        td[10].style.display='none' //tenten
-        td[11].style.display='none' //tsunade
-        td[12].style.display='' //danzou
-        td[13].style.display='none' //gaara
-        td[14].style.display='' //hidan
-        td[15].style.display='none' //kabuto
-        td[16].style.display='' //kaguya
-        td[17].style.display='none' //kakashi
-        td[18].style.display='none' //lee
-        td[19].style.display='' //madara
-        td[20].style.display='' //minato
-    }*/
 })
-//==============================================================
-
 //==============================================================
 document.querySelector('#female').addEventListener('click', e=> {
     filterFemale()
-    /*let i;
-    for(i=0;i<td.length;i++) {
-        td[0].style.display='none' //naruto
-        td[1].style.display='none' //neji
-        td[2].style.display='none' //orochimaru
-        td[3].style.display='none' //pain
-        td[4].style.display='none' //sai
-        td[5].style.display='none' //sasori
-        td[6].style.display='none' //shikamaru
-        td[7].style.display='none' //shino
-        td[8].style.display='none' //shisui
-        td[9].style.display='' //shizune
-        td[10].style.display='' //tenten
-        td[11].style.display='' //tsunade
-        td[12].style.display='none' //danzou
-        td[13].style.display='none' //gaara
-        td[14].style.display='none' //hidan
-        td[15].style.display='none' //kabuto
-        td[16].style.display='' //kaguya
-        td[17].style.display='none' //kakashi
-        td[18].style.display='none' //lee
-        td[19].style.display='none' //madara
-        td[20].style.display='none' //minato
-    }*/
 })
 //==============================================================
 document.querySelector('#male').addEventListener('click', e=> {
@@ -248,7 +173,7 @@ document.querySelector('#male').addEventListener('click', e=> {
 })
 //==============================================================
 function filterAll() {
-    const newPersAll = personagens.filter(personagem => personagem);
+    let newPersAll = personagens.filter(personagem => personagem);
     let i;
     for(i=0;i<newPersAll.length;i++) {
         td[i].style.display='';
@@ -281,22 +206,36 @@ function isDead() {
     }
 }
 //==============================================================
+function isFemale() {
+    let i;
+    for(i=0;i<persMaleTd.length;i++){
+        persMaleTd[i].style.display='none';
+    }
+    for(i=0;i<persFemaleTd.length;i++){
+        persFemaleTd[i].style.display='';
+    }
+}
+//==============================================================
+function isMale() {
+    let i;
+    for(i=0;i<persMaleTd.length;i++){
+        persMaleTd[i].style.display='';
+    }
+    for(i=0;i<persFemaleTd.length;i++){
+        persFemaleTd[i].style.display='none';
+    }
+}
+//==============================================================
 function filterAlive() {
-    
     //let newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
-    
-        isAlive()
-        //console.log(persAliveTd[i])
-   
+    isAlive()
+    //console.log(persAliveTd[i])
 }
 //==============================================================
 function filterDead() {
-    let i;
-    let newPersDead = personagens.filter(personagem => personagem.status === 'Dead')
-    for(i=0;i<newPersDead.length;i++){
-        isDead()
-        //console.log(persDeadTd[i]);
-    }
+    //let newPersDead = personagens.filter(personagem => personagem.status === 'Dead')
+    isDead()
+    //console.log(persDeadTd[i]);
 }
 //==============================================================
 function filterAllGender() {
@@ -308,24 +247,12 @@ function filterAllGender() {
 }
 //==============================================================
 function filterMale() {
-    let persMale = personagens.filter(personagem => personagem.gender === 'Male')
-    let i;
-    for(i=0;i<persMale.length;i++){
-        persFemaleTd[i].style.display='none';
-        persMaleTd[i].style.display='';
-        console.log(persMaleTd[i]);
-        console.log(persMale.length)
-    }
+    //let persMale = personagens.filter(personagem => personagem.gender === 'Male')
+    isMale()
 }
 //==============================================================
 function filterFemale() {
-    let persFemale = personagens.filter(personagem => personagem.gender === 'Female')
-    let i;
-    for(i=0;i<persFemale.length;i++){
-        persFemaleTd[i].style.display='';
-        persMaleTd[i].style.display='none';
-        //console.log(persFemaleTd[i]);
-        //console.log(persFemale.length)
-    }
+    //let persFemale = personagens.filter(personagem => personagem.gender === 'Female')
+    isFemale()
 }
 //==============================================================
