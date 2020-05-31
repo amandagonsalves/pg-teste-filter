@@ -147,42 +147,16 @@ function filterPers() {
 var table = document.querySelector('#tabela');
 var td = table.getElementsByTagName('td');
 console.log(td.length)
-/*function selectTd() {
-    let i;
-    for(i=0;i<td.length;i++) {
-        td[i].style.display=''
-    }*/
-    /*if(filterAll===true) {
-        td[i].style.display='none'
-    } else if(filterAlive()===true) {
-        td[i].style.display='none'
-    } else if(filterDead()===true) {
-
-    } else if(filterAllGender()===true) {
-
-    } else if(filterFemale()===true) {
-
-    } else if(filterMale()===true) {
-
-    }
-}
-selectTd()*/
-/* INDEX
-0 naruto
-1 neji
-2 orochi
-3
-
-
-
-*/ 
+//==============================================================
 document.querySelector('#btn-all').addEventListener('click', e=> {
     let i;
     for(i=0;i<td.length;i++) {
         td[i].style.display=''
     }
 })
+//==============================================================
 document.querySelector('#alive').addEventListener('click', e=> {
+    filterAlive()
     /*let i;
     for(i=0;i<td.length;i++) {
         td[0].style.display='' //naruto
@@ -207,10 +181,12 @@ document.querySelector('#alive').addEventListener('click', e=> {
         td[19].style.display='none' //madara
         td[20].style.display='none' //minato
     }*/
-    filterAlive()
+    
 })
+//==============================================================
 document.querySelector('#dead').addEventListener('click', e=> {
-    let i;
+    filterDead()
+    /*let i;
     for(i=0;i<td.length;i++) {
         td[0].style.display='none' //naruto
         td[1].style.display='' //neji
@@ -233,16 +209,16 @@ document.querySelector('#dead').addEventListener('click', e=> {
         td[18].style.display='none' //lee
         td[19].style.display='' //madara
         td[20].style.display='' //minato
-    }
+    }*/
 })
+//==============================================================
 document.querySelector('#btn-allgender').addEventListener('click', e=> {
-    let i;
-    for(i=0;i<td.length;i++) {
-        td[i].style.display=''
-    }
+   filterAllGender()
 })
+//==============================================================
 document.querySelector('#female').addEventListener('click', e=> {
-    let i;
+    filterFemale()
+    /*let i;
     for(i=0;i<td.length;i++) {
         td[0].style.display='none' //naruto
         td[1].style.display='none' //neji
@@ -265,63 +241,79 @@ document.querySelector('#female').addEventListener('click', e=> {
         td[18].style.display='none' //lee
         td[19].style.display='none' //madara
         td[20].style.display='none' //minato
-    }
+    }*/
 })
+//==============================================================
 document.querySelector('#male').addEventListener('click', e=> {
-    let i;
-    for(i=0;i<td.length;i++) {
-        td[0].style.display='' //naruto
-        td[1].style.display='' //neji
-        td[2].style.display='' //orochimaru
-        td[3].style.display='' //pain
-        td[4].style.display='' //sai
-        td[5].style.display='' //sasori
-        td[6].style.display='' //shikamaru
-        td[7].style.display='' //shino
-        td[8].style.display='' //shisui
-        td[9].style.display='none' //shizune
-        td[10].style.display='none' //tenten
-        td[11].style.display='none' //tsunade
-        td[12].style.display='' //danzou
-        td[13].style.display='' //gaara
-        td[14].style.display='' //hidan
-        td[15].style.display='' //kabuto
-        td[16].style.display='none' //kaguya
-        td[17].style.display='' //kakashi
-        td[18].style.display='' //lee
-        td[19].style.display='' //madara
-        td[20].style.display='' //minato
-    }
+    filterMale()
 })
+//==============================================================
 function filterAll() {
     const newPersAll = personagens.filter(personagem => personagem);
 }
-filterAll();
+//==============================================================
 function filterAlive() {
     let i;
-    var newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
-    var table = document.querySelector('#tabela')
-    var persDeadTd = table.getElementsByClassName('dead')
-    var persAliveTd = table.getElementsByClassName('alive')
+    let newPersAlive = personagens.filter(personagem => personagem.status === 'Alive')
     for(i=0;i<newPersAlive.length;i++){
-        
-        //var indices = newPersAlive.indexOf('Alive',[i])
+        let table = document.querySelector('#tabela')
+        let persDeadTd = table.getElementsByClassName('dead')
+        let persAliveTd = table.getElementsByClassName('alive')
         persAliveTd[i].style.display='';
         persDeadTd[i].style.display='none';
         console.log(persAliveTd[i]);
-        
     }
 }
-filterAlive()
+//==============================================================
 function filterDead() {
-    personagens.filter(personagem => personagem.status === 'Dead')
+    let newPersDead = personagens.filter(personagem => personagem.status === 'Dead')
+    let i;
+    for(i=0;i<newPersDead.length;i++){
+        let table = document.querySelector('#tabela')
+        let persDeadTd = table.getElementsByClassName('dead')
+        let persAliveTd = table.getElementsByClassName('alive')
+        persAliveTd[i].style.display='none';
+        persDeadTd[i].style.display='';
+        console.log(persDeadTd[i]);
+        
+    }
+    
 }
+//==============================================================
 function filterAllGender() {
-    personagens.filter(personagem => personagem.gender)
+    let persAllGender = personagens.filter(personagem => personagem.gender);
+    let i;
+    for(i=0;i<persAllGender.length;i++) {
+        td[i].style.display=''
+    }
 }
+//==============================================================
 function filterMale() {
-    personagens.filter(personagem => personagem.gender === 'Male')
+    var persMale1 = personagens.filter(personagem => personagem.gender === 'Male')
+    let i;
+    for(i=0;i<persMale1.length;i++){
+        let table = document.querySelector('#tabela')
+        let persFemaleTd1 = table.getElementsByClassName('female')
+        let persMaleTd1 = table.getElementsByClassName('male')
+        persFemaleTd1[i].style.display='none';
+        persMaleTd1[i].style.display='';
+        console.log(persMaleTd1[i]);
+        console.log(persMale1.length)
+    }
 }
+//==============================================================
 function filterFemale() {
-    personagens.filter(personagem => personagem.gender === 'Female')
+    let persFemale2 = personagens.filter(personagem => personagem.gender === 'Female')
+    let i;
+    let table = document.querySelector('#tabela')
+        let persMaleTd2 = table.getElementsByClassName('male')
+        let persFemaleTd2 = table.getElementsByClassName('female')
+    for(i=0;i<persFemale2.length;i++){
+        
+        persFemaleTd2[i].style.display='none';
+        persMaleTd2[i].style.display='none';
+        console.log(persFemaleTd2[i]);
+        console.log(persFemale2.length)
+    }
 }
+//==============================================================
