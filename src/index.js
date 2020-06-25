@@ -4,147 +4,147 @@ const characters = [
         gender: 'Male',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/naruto.jpg'
+        image: './src/img/naruto.jpg'
     },
     {
         name: 'Tsunade',
         gender: 'Female',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/tsunade.jpg'
+        image: './src/img/tsunade.jpg'
     },
     {
         name: 'Danzou',
         gender: 'Male',
         status: 'Dead',
         season: 'All',
-        image: './src/data/img/danzou.jpg'
+        image: './src/img/danzou.jpg'
     },
     {
         name: 'Gaara',
         gender: 'Male',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/gaara.jpg'
+        image: './src/img/gaara.jpg'
     },
     {
         name: 'Hidan',
         gender: 'Male',
         status: 'Dead',
         season: 'Shippuden',
-        image: './src/data/img/hidan.jpg'
+        image: './src/img/hidan.jpg'
     },
     {
         name: 'Kabuto',
         gender: 'Male',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/kabuto.jpg'
+        image: './src/img/kabuto.jpg'
     },
     {
         name: 'Kaguya',
         gender: 'Female',
         status: 'Dead',
         season: 'Shippuden',
-        image: './src/data/img/kaguya.jpg'
+        image: './src/img/kaguya.jpg'
     },
     {
         name: 'Kakashi',
         gender: 'Male',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/kakashi.jpg'
+        image: './src/img/kakashi.jpg'
     },
     {
         name: 'Rock Lee',
         gender: 'Male',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/lee.jpg'
+        image: './src/img/lee.jpg'
     },
     {
         name: 'Madara',
         gender: 'Male',
         status: 'Dead',
         season: 'Shippuden',
-        image: './src/data/img/madara.jpg'
+        image: './src/img/madara.jpg'
     },
     {
         name: 'Minato',
         gender: 'Male',
         status: 'Dead',
         season: 'Shippuden',
-        image: './src/data/img/minato.jpg'
+        image: './src/img/minato.jpg'
     },
     {
         name: 'Neji',
         gender: 'Male',
         status: 'Dead',
         season: 'All',
-        image: './src/data/img/neji.jpg'
+        image: './src/img/neji.jpg'
     },
     {
         name: 'Orochimaru',
         gender: 'Male',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/orochimaru.jpg'
+        image: './src/img/orochimaru.jpg'
     },
     {
         name: 'Pain',
         gender: 'Male',
         status: 'Dead',
         season: 'Shippuden',
-        image: './src/data/img/pain.jpg'
+        image: './src/img/pain.jpg'
     },
     {
         name: 'Sai',
         gender: 'Male',
         status: 'Alive',
         season: 'Shippuden',
-        image: './src/data/img/sai.jpg'
+        image: './src/img/sai.jpg'
     },
     {
         name: 'Sasori',
         gender: 'Male',
         status: 'Dead',
         season: 'Shippuden',
-        image: './src/data/img/sasori.jpg'
+        image: './src/img/sasori.jpg'
     },
     {
         name: 'Shikamaru',
         gender: 'Male',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/shikamaru.jpg'
+        image: './src/img/shikamaru.jpg'
     },
     {
         name: 'Shino',
         gender: 'Male',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/shino.jpg'
+        image: './src/img/shino.jpg'
     },
     {
         name: 'Shisui',
         gender: 'Male',
         status: 'Dead',
         season: 'Shippuden',
-        image: './src/data/img/shisui.jpg'
+        image: './src/img/shisui.jpg'
     },
     {
         name: 'Shizune',
         gender: 'Female',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/shizune.jpg'
+        image: './src/img/shizune.jpg'
     },
     {
         name: 'Tenten',
         gender: 'Female',
         status: 'Alive',
         season: 'All',
-        image: './src/data/img/tenten.jpg'
+        image: './src/img/tenten.jpg'
     }
 ];
 
@@ -171,6 +171,9 @@ function renderCard(character) {
             </p>
             <p class="card-text">
                 Sexo: ${character.gender}
+            </p>
+            <p class="card-text">
+                Temporada: ${character.season}
             </p>
         </div>
         `
