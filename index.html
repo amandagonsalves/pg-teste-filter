@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="buttons">
+            <label>Status</label>
+            <button type="button" class="btn btn-secondary" id="status-all">Todos</button>
+            <button type="button" class="btn btn-secondary" id="status-alive">Vivo</button>
+            <button type="button" class="btn btn-secondary" id="status-dead">Morto</button>
+        </div>
+        <div class="buttons">
+            <label>Sexo</label>
+            <button type="button" class="btn btn-secondary" id="gender-all">Todos</button>
+            <button type="button" class="btn btn-secondary" id="gender-female">Feminino</button>
+            <button type="button" class="btn btn-secondary" id="gender-male">Masculino</button>
+        </div>
+        <div class="buttons">
+            <label>Temporadas</label>
+            <button type="button" class="btn btn-secondary" id="gender-all">Todos</button>
+            <button type="button" class="btn btn-secondary" id="season-all">Todos</button>
+            <button type="button" class="btn btn-secondary" id="season-shippuden">Shippuden</button>
+        </div>
+    </section>
+
+    <main id="cards"></main>
+    <script src="./src/index.js"></script>
+    <script src="./src/filter.js"></script>
+    <script src="./src/gender.js"></script>
+    <script src="./src/status.js"></script>
+    <script src="./src/season.js"></script>
+</body>
+</html>
