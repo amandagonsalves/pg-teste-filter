@@ -3,7 +3,8 @@
         "name": "Naruto",
         "gender": "Male",
         "status": "Alive",
-        "season": "All"
+        "season": "All",
+        "image": "./img/naruto.jpg"
     },
     {
         "name": "Tsunade",
