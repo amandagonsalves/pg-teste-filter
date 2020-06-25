@@ -8,5 +8,11 @@ function isStatus(character, status) {
     return character.status === status;
 };
 function filterByStatus(characters, status) {
-    return characters.filter(character => isStatus(character,status));
+    return characters.filter(character => isStatus(character, status));
 };
+function isSeason(character, season) {
+    return character.season === season;
+};
+function filterBySeason(characters, season) {
+    return characters.filter(character => isSeason(character, season));
+}
