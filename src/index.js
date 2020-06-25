@@ -146,9 +146,14 @@ const characters = [
         season: 'All',
         image: './src/data/img/tenten.jpg'
     }
-]
+];
 
- const cardsElement = document.querySelector('#cards');
+const cardsElement = document.querySelector('#cards');
+
+function renderCards(characters) {
+    cardsElement.innerHTML = '';
+    characters.map(renderCard)
+}
 
 function renderCard(character) {
     const div = document.createElement('div');
@@ -170,8 +175,8 @@ function renderCard(character) {
         </div>
         `
     cardsElement.appendChild(div)
-}
+};
 characters.forEach(character => {
     renderCard(character);
-})
+});
     
