@@ -6,11 +6,11 @@ const btnGenderAll = document.querySelector('#gender-all');
 
 btnGenderAll.addEventListener("click", () => renderCards(characters));
 
-btnMale.addEventListener("click", e => renderByGender('Male'));
+btnMale.addEventListener("click", () => renderByGender('Male'));
 
-btnFemale.addEventListener("click", e => renderByGender('Female'));
+btnFemale.addEventListener("click", () => renderByGender('Female'));
 
-function renderByGender(characters,gender) {
+function renderByGender(gender) {
   const newData = filterByGender(characters, gender);
   renderCards(newData);
 }
