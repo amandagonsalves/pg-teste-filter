@@ -152,11 +152,11 @@ const characters = [
 
 function renderCard(character) {
     const div = document.createElement('div');
-    div.style.width = '18rem';
+    div.style.width = '12rem';
     div.style.margin = '1rem';
     div.className = 'card';
     div.innerHTML = `
-        <img src="${character.image}" class="card-img-top" alt="character image" width=180px height=300px/>
+        <img src="${character.image}" class="card-img-top" alt="character image"/>
         <div class="card-body">
             <h5 class="card-title">
                 ${character.name}
